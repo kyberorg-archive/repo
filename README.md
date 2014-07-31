@@ -2,6 +2,24 @@
 
 ## Instructions
 
+### How to get dependencies from repository
+ 
+ Just add following section to your pom.xml:
+ 
+    <repositories>
+            <repository>
+                <id>virtalab-maven-repo</id>
+                <url>https://raw.github.com/virtalab/repo/mvn-repo/</url>
+                <snapshots>
+                    <enabled>true</enabled>
+                    <updatePolicy>always</updatePolicy>
+                </snapshots>
+            </repository>
+        </repositories>
+         
+        
+### How to release to repository
+
 * Add distributionManagement section to you pom.xml:
     
         <distributionManagement>
@@ -38,7 +56,7 @@
                 <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
                 <branch>refs/heads/mvn-repo</branch>
                 <includes><include>**/*</include></includes>
-                <! -- This is our maven repo -->
+                <!-- This is our maven repo -->
                 <repositoryName>repo</repositoryName>
                 <repositoryOwner>virtalab</repositoryOwner>
             </configuration>
