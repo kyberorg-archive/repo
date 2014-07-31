@@ -6,7 +6,7 @@
  
  Just add following section to your pom.xml:
  
-    <repositories>
+        <repositories>
             <repository>
                 <id>virtalab-maven-repo</id>
                 <url>https://raw.github.com/virtalab/repo/mvn-repo/</url>
