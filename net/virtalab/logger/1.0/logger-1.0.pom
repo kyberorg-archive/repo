@@ -43,13 +43,13 @@
         </developer>
     </developers>
 
-    <distributionManagement>
+<!--    <distributionManagement>
         <repository>
             <id>internal.repo</id>
             <name>Temporary Staging Repository</name>
             <url>file://${project.build.directory}/mvn-repo</url>
         </repository>
-    </distributionManagement>
+    </distributionManagement>-->
 
     <dependencies>
         <dependency>
@@ -74,7 +74,7 @@
                 <artifactId>site-maven-plugin</artifactId>
                 <version>0.9</version>
                 <configuration>
-                    <message>Maven artifact for ${project.name}-${project.version}</message>
+                    <message>Group: ${project.groupId} Project: ${project.artifactId} Ver: ${project.version}</message>
                     <noJekyll>true</noJekyll>
                     <merge>true</merge>
                     <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
