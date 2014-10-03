@@ -85,4 +85,4 @@
 
 * Performing release
 
-        mvn -P release clean release:prepare release:perform
+        mvn --update-snapshots -s /path/to/settings.xml clean release:prepare release:perform -P release
