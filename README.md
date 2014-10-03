@@ -19,8 +19,13 @@
          
         
 ### How to release to repository
+* Add following property to your pom.xml:
+* 
+        <properties>
+            <github.global.server>github</github.global.server>
+        </properties>
 
-* Add distributionManagement section to you pom.xml:
+* Add distributionManagement section to your pom.xml:
     
         <distributionManagement>
             <repository>
@@ -69,5 +74,15 @@
                 </execution>
             </executions>
         </plugin>
-                
-                
+            
+* Add credentials to your settings.xml (Maven settings):
+ 
+        <server>
+            <id>github</id><!-- Should be same as property github.global.server in pom.xml -->
+            <username>login</username>
+            <password>pass</password>
+        </server>
+
+* Performing release
+
+        mvn -P release clean release:prepare release:perform
