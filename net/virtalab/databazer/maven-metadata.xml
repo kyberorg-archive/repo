@@ -3,10 +3,9 @@
   <groupId>net.virtalab</groupId>
   <artifactId>databazer</artifactId>
   <versioning>
-    <release>0.4</release>
     <versions>
-      <version>0.4</version>
+      <version>0.5-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20141005151516</lastUpdated>
+    <lastUpdated>20141005151804</lastUpdated>
   </versioning>
 </metadata>
